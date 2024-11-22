@@ -1,0 +1,72 @@
+---
+const FAQ_Items = [
+  {
+    title: 'Is this tool legal?',
+    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.',
+  },
+  {
+    title: 'How exactly does ScamAi work under the hood?',
+    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.',
+  },
+  {
+    title: 'What can ScamAi do that my employees cannot do already?',
+    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.',
+  },
+  {
+    title: 'Is it dangerous?',
+    content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.',
+  }
+]
+---
+
+<div class="px-4 py-10">
+  <div class="w-full w-full mx-auto">
+    <div class="text-center max-w-[840px] m-auto">
+      <h3 class="text-gray-800">FAQ</h3>
+      <p class="py-6 font-light">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.</p>
+    </div>
+    {
+      FAQ_Items.map((item, i) => 
+        <div class="border-b-2 border-gray-400">
+          <!-- Header -->
+          <button
+            class="flex justify-between w-full px-4 py-4 text-gray-800 font-semibold focus:outline-none"
+            onclick={`toggleAccordion("accordion-content-${i}")`}
+          >
+            <h5 class="text-left text-gray-800">{item.title}</h5>
+            <svg
+              class="w-5 h-5 transform transition-transform duration-300"
+              id="accordion-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <!-- Content -->
+          <div id={`accordion-content-${i}`} class="hidden px-4 py-3 bg-white text-gray-700 text-left">
+            <p>
+              {item.content}
+            </p>
+          </div>
+        </div>
+      )
+    }
+  </div>
+</div>
+
+<script is:inline>
+  function toggleAccordion(contentId) {
+    const content = document.getElementById(contentId);
+    const icon = document.getElementById('accordion-icon');
+    if (content.classList.contains('hidden')) {
+      content.classList.remove('hidden');
+      icon.classList.add('rotate-180');
+    } else {
+      content.classList.add('hidden');
+      icon.classList.remove('rotate-180');
+    }
+  }
+</script>

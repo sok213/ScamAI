@@ -1,0 +1,31 @@
+---
+const bagflex = "./../../public/icons/bagflex.svg";
+const facenovel = "./../../public/icons/FaceNovel.svg";
+const ustube = "./../../public/icons/UsTube.svg";
+const shoogle = "./../../public/icons/Shoogle.svg";
+const Thisknee = "./../../public/icons/Thisknee.svg";
+
+const brandsList = [
+  bagflex,
+  facenovel,
+  shoogle,
+  Thisknee,
+  ustube
+];
+---
+
+<div class="px-4 pt-4 pb-6">
+  <div class="text-center py-4 text-gray-800">
+    <h5 class="font-semibold">TRUSTED BY THE MOST SHADY COMPANIES</h5>
+  </div>
+
+  <div class="flex justify-between max-w-[580px] m-auto">
+    {
+      brandsList.map(brand => {
+        return <div class="py-4">
+          <img src={brand} class="w-[80px]"/>
+        </div>
+      })
+    }
+  </div>
+</div>

@@ -1,0 +1,24 @@
+---
+import Layout from './../layouts/layout.astro';
+import HeroBanner from '../components/heroBanner.astro';
+import AffiliatedBrands from '../components/affiliatedBrands.astro';
+import ThreeColFeature from '../components/threeColFeature.astro';
+import TwoRowContentCards from '../components/twoRowContentCards.astro';
+import MansoryGrid from '../components/mansoryGrid.astro';
+import FAQ from '../components/faq.astro';
+import Resources from '../components/resources.astro';
+---
+
+<Layout pageTitle="Welcome to ScamAi">
+  <HeroBanner />
+  <div class="container m-auto">
+    <AffiliatedBrands />
+  </div>
+  <ThreeColFeature />
+  <div class="container m-auto">
+    <TwoRowContentCards />
+    <MansoryGrid />
+    <FAQ />
+  </div>
+  <Resources />
+</Layout>

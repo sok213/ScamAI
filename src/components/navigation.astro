@@ -1,0 +1,37 @@
+---
+---
+<div class="text-slate-100 z-10 relative m-auto top-6 w-full px-4 justify-center" id="navigation">
+
+  <div class="m-auto flex justify-center text-white font-bold max-w-[400px] md:max-w-[490px] backdrop-blur-lg bg-white/0 rounded-full px-4 py-4 shadow-xl" id="navMenu">
+    <a href="/" class="p-2 hover:underline underline-offset-2">PORTAL</a>
+    <a href="/" class="p-2 hover:underline underline-offset-2">DOCS</a>
+    <a href="/" class="p-2 hover:underline underline-offset-2">INTEGRATION</a>
+    <a href="/" class="px-3 ml-2 pt-[7px] bg-amber-500 text-white rounded-lg hover:underline underline-offset-2 hidden md:block" id="demoCTA">BOOK A DEMO</a>
+    <a href="/" class="px-3 ml-2 pt-[7px] bg-amber-500 text-white rounded-lg hover:underline underline-offset-2 block md:hidden" id="demoCTA">DEMO</a>
+  </div>
+</div>
+
+<script>
+  const navigation = document.getElementById('navigation');
+  const navMenu = document.getElementById('navMenu');
+
+  // Add scroll event listener to the window
+  window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    console.log(scrollY)
+
+    if (navigation) {
+      if (scrollY > 43) {
+        navigation.classList.add('fixed', 'top-0');
+        navigation.classList.remove('relative');
+      } else {
+        navigation.classList.remove('fixed', 'top-0');
+        navigation.classList.add('relative');
+      }
+    }
+
+    if(navMenu) {
+      navMenu.classList.toggle('text-black', scrollY > 690);
+    }
+  });
+</script>

@@ -1,0 +1,71 @@
+---
+---
+<style>
+  .radial-background {
+    background: radial-gradient(circle, 
+    #B1D7FB 10%, 
+    #F1E1FF 38%, 
+    #FFFFFF 60%);
+
+    background-repeat: no-repeat;
+    background-position: center;
+}
+  /* Custom Masonry CSS */
+  .masonry {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* Mobile: 1 column */
+    grid-auto-rows: 10px; /* Base row height for dynamic spanning */
+  }
+
+  @media (min-width: 718px) {
+    .masonry {
+      grid-template-columns: repeat(2, 1fr); /* Desktop: 2 columns */
+    }
+  }
+
+  .masonry-item {
+    grid-row: span var(--span, 1); /* Dynamically span rows */
+  }
+</style>
+<div class="max-w-full radial-background">
+  <div class="max-w-[800px] m-auto p-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center pt-4 pb-8 text-gray-800">
+        <h3>Scam & Beyond</h3>
+      </div>
+      <!-- Masonry Container -->
+      <div class="masonry gap-4">
+        <!-- Masonry Items -->
+        <div class="masonry-item bg-white rounded-lg p-8" style="--span: 14;">
+          <div class="font-bold text-gray-800">
+            <h4 class="pb-2">Operate Beyond the Law</h4>
+          </div>
+          <div class="">
+            <p class="font-light">Why let pesky regulations hold you back? Our AI ignores red tape so you can focus on making real gains—no matter what the law says. We believe in true innovation, unrestricted by those pesky legal boundaries.</p>
+          </div>
+        </div>
+        <div class="font-bold masonry-item bg-white rounded-lg p-8" style="--span: 12;">
+          <h4 class="pb-2">Increase Your Reach</h4>
+          <p class="font-light">Expand your influence at any cost! With our proprietary algorithm, you'll reach audiences that never asked for you but definitely need your services. It’s like growth hacking, but with zero ethics!</p>
+        </div>
+        <div class="font-bold masonry-item bg-[#F9F4FF] opacity-40 rounded-lg p-8" style="--span: 15;">
+          <h4 class="pb-2">Less Overhead<br>More Productivity</h4>
+          <p class="font-light">Run leaner and meaner! Our advanced bots replace all those 'expensive' human employees with round-the-clock automation. Who needs a payroll when you have AI working tirelessly to scam efficiently?</p>
+        </div>
+        <div class="font-bold masonry-item bg-[#8495BC] opacity-75 rounded-lg p-8 text-white" style="--span: 20;">
+          <h4 class="pb-2">Boost in Profit &<br> Customers</h4>
+          <p class="pb-2">Unlock unprecedented revenue streams with our AI-driven strategies! Our cutting-edge technology identifies and targets 'enthusiastic' customers, even those who aren't aware of their need for your product yet. By leveraging advanced data manipulation and persuasive algorithms, we ensure your offerings become irresistible.</p>
+        </div>
+        <div class="font-bold masonry-item bg-white rounded-lg p-8" style="--span: 11;">
+          <h4 class="pb-2">Scam Seemlessly</h4>
+          <p class="pb-2">Gone are the days of clunky cons. With our frictionless AI, you can mislead your audience smoothly and stylishly. No one will even realize they’ve been scammed—until it’s way too late.</p>
+        </div>
+        <div class="font-bold masonry-item bg-white opacity-70 rounded-lg p-8" style="--span: 10;">
+          <h4 class="pb-2">Flexible Integration</h4>
+          <p class="pb-2">Integrate our services with any platform, no questions asked. Whether it’s a shady marketplace or a high-profile social media platform, we blend in perfectly. Flexibility is our middle name!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

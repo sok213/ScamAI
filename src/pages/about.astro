@@ -1,0 +1,26 @@
+---
+import Layout from './../layouts/layout.astro';
+const identity = {
+  firstName: "Sarah",
+  country: "Canada",
+  occupation: "Technical Writer",
+  hobbies: ["photography", "birdwatching", "baseball"],
+};
+
+const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
+---
+<Layout pageTitle="About">
+  <h1>About Me</h1>
+  <h2>... and my new Astro site!</h2>
+
+  <p>I am working through Astro's introductory tutorial. This is the second page on my website, and it's the first one I built myself!</p>
+
+  <p>Below is a dynamic list.</p>
+  <ul>
+    {skills.map( hobby => 
+      <li>
+        <p>{hobby}</p>
+      </li>
+    )}
+  </ul>
+</Layout>

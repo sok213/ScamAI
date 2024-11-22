@@ -1,0 +1,40 @@
+---
+const heroBanner = "./../../public/icons/herologo.png";
+const electric = "./../../public/icons/electric.svg";
+---
+<style>
+  .heroGradient {
+    background: rgb(0, 0, 0);
+    background: radial-gradient(circle at center 650px, rgba(60,16,106,1) 0%, rgba(27,13,42,1) 45%, rgb(0, 0, 0) 120%);
+  }
+</style>
+<div class="heroGradient px-4 py-2 h-[700px] mt-[-72px]" id="heroBanner">
+  <div class="container m-auto flex flex-col justify-between h-full">
+    <div class="flex justify-center flex-col h-full pt-20 pb-10 md:pt-10 md:pb-0">
+      <div class="self-center">
+        <img src={heroBanner}/>
+      </div>
+      <p class="text-center pt-2 text-slate-200">The Next-Gen Scam Solution for the Strange New World</p>
+    </div>
+
+    <div class="pb-20 text-slate-200">
+      <p class="text-3xl pb-1 font-bold">87+ MILLION <span class="text-green-600">WINNERS</span></p>
+      <p class="text-1xl pb-4">2 BILLION <span>LOSERS</span> SCAMMED</p>
+      <p class="text-4xl pb-1 flex font-bold">POWERED BY GREEN NUCLEAR <span class="px-2"><img class="h-10 mt-[-10px]" src={electric}/></span></p>
+      <p class="text-1xl">ENDORSED BY <span class="text-red-600 font-bold"><i>EVILCORP CO.</i></span></p>
+    </div>
+</div>
+
+<script>
+  const heroBanner = document.getElementById('heroBanner');
+
+  // Add scroll event listener to the window
+  window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+
+    if(heroBanner) {
+      // Toggle the class based on scroll position
+      heroBanner.classList.toggle('mt-[-72px]', scrollY < 43);
+    }
+  });
+</script>

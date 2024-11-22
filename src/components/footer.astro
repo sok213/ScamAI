@@ -1,0 +1,108 @@
+---
+const aol = "./../../public/icons/aol.svg";
+const myspace = "./../../public/icons/myspace.svg";
+const threads = "./../../public/icons/threads.svg";
+
+const footerContent = [
+  {
+    header: 'Resources',
+    links: [
+      'Guides',
+      'Documentation',
+      'Templates',
+      'Integrations',
+      'Discount Eligibility',
+      'Affiliate Program'
+    ]
+  },
+  {
+    header: 'Company',
+    links: [
+      'About',
+      'Partners',
+      'Press Releases',
+      'Careers',
+      'Partners & Sponsors'
+    ]
+  },
+  {
+    header: 'Support',
+    links: [
+      'Help Center',
+      'API Docs',
+      'Account',
+      'Report an issue',
+    ]
+  },
+  {
+    header: 'Connect',
+    links: [
+      'Contact Us',
+      'Follow us',
+      'Visit Us',
+    ]
+  }
+];
+
+const socialLinks = [
+  {
+    icon: aol,
+    link: '#',
+    alt: 'icon of AOL logo'
+  },
+  {
+    icon: myspace,
+    link: '#',
+    alt: 'icon of MySpace logo'
+  },
+  {
+    icon: threads,
+    link: '#',
+    alt: 'icon of Instagram Threads logo'
+  },
+]
+
+const year = new Date().getFullYear();
+---
+
+<div class="bg-stone-950 text-slate-100 px-8 md:px-4 pt-12 pb-8">
+  <div class="container m-auto">
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-0 sm:gap-8 pb-8">
+      <div>
+        Logo here
+      </div>
+      {
+        footerContent.map(item => {
+          return <div class="pb-6 sm:pb-0">
+            <h4>{item.header}</h4>
+              <ul class="pt-2">
+                {
+                  item.links.map(link => {
+                    return <li class="py-1"><a href="#" class="text-neutral-400 hover:underline">{link}</a></li>
+                  })
+                }
+              </ul>
+          </div>
+        })
+      }
+    </div>
+
+    <div class="border-stone-700 border-t-2 pt-8 flex flex-col-reverse md:flex-col">
+      <div class="self-center md:self-start">
+        <p class="text-neutral-400"><small>Copyright {year} ScamAi Co.</small></p>
+      </div>
+
+      <div class="self-center mt-2 pb-4 md:mt-[-40px] md:pb-0">
+        <div class="flex justify-between w-[170px]">
+          {
+            socialLinks.map(item => {
+              return <div class="p-2 rounded-full bg-stone-800">
+                <a href={item.link}><img src={item.icon} class="w-8"/></a>
+              </div>
+            })
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
