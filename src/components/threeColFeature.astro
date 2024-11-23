@@ -1,8 +1,23 @@
 ---
 const rocket = './../../public/icons/rocket.svg';
 const graph = './../../public/icons/graph.svg';
+const gear = './../../public/icons/gear.png';
+const clock = './../../public/icons/clock.png';
 ---
 <style>
+
+  #gearIcon {
+    animation: rotate 20s linear infinite; /* Apply the animation */
+  }
+
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
 
   @media screen and (max-width: 1180px) {
     #waitCard-top {
@@ -50,6 +65,10 @@ const graph = './../../public/icons/graph.svg';
       <div class="text-center pb-2">
         <div class="bg-gradient-to-r from-red-500 to-orange-500 rounded-full absolute w-12 h-12 mt-[-34px] ml-[-32px]">
           <p class="font-bold text-4xl p-0 m-0 pt-1 text-white">2</p>
+        </div>
+        <div class="absolute">
+          <img src={gear} class="relative top-[-50px] left-[270px] z-10" id="gearIcon" />
+          <img src={clock} class="relative top-[-120px] left-[300px] w-[80px] h-[80px] z-10" />
         </div>
         <h3 class="text-[#37ABFF]">WAIT</h3>
       </div>

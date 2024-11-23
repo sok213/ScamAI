@@ -19,10 +19,10 @@ const brandsList = [
     <h5 class="font-semibold">TRUSTED BY THE MOST SHADY COMPANIES</h5>
   </div>
 
-  <div class="flex justify-between max-w-[580px] m-auto">
+  <div class="grid grid-cols-3 md:grid-cols-5 max-w-[700px] m-auto">
     {
       brandsList.map(brand => {
-        return <div class="py-4">
+        return <div class="py-4 flex justify-center">
           <img src={brand} class="w-[80px]"/>
         </div>
       })
