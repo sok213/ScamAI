@@ -18,8 +18,17 @@ const FAQ_Items = [
   }
 ]
 ---
+<style>
+  .accordionItem {
+    transition: 0.5s;
+    /* height: 0px; */
+  }
 
-<div class="px-4 pb-10 pt-4">
+  /* .accordionItem::after {
+    height: 400px;
+  } */
+</style>
+<div class="px-4 pb-10 pt-4 z-50 relative">
   <div class="w-full w-full mx-auto">
     <div class="text-center max-w-[840px] m-auto">
       <h3 class="text-gray-800">FAQ</h3>
@@ -30,7 +39,7 @@ const FAQ_Items = [
         <div class="border-b-2 border-gray-400">
           <!-- Header -->
           <button
-            class="flex justify-between w-full px-4 py-4 text-gray-800 font-semibold focus:outline-none"
+            class="flex justify-between w-full px-4 py-4 text-gray-800 font-semibold focus:outline-none bg-white z-50 relative"
             onclick={`toggleAccordion("accordion-content-${i}")`}
           >
             <h5 class="text-left text-gray-800">{item.title}</h5>
@@ -46,14 +55,17 @@ const FAQ_Items = [
             </svg>
           </button>
           <!-- Content -->
-          <div id={`accordion-content-${i}`} class="hidden px-4 py-3 bg-white text-gray-700 text-left">
-            <p>
+          <div id={`accordion-content-${i}`} class="h-0 m-0 p-0 bg-white text-gray-700 text-left accordionItem z-0 relative">
+            <p class="relative z-0 p-4">
               {item.content}
             </p>
           </div>
         </div>
       )
     }
+    <!-- The bottom div functinos as a blank cover to hide the text coming from the accordion element. -->
+    <div class="h-24 bg-white z-50 relative">
+    </div>
   </div>
 </div>
 
@@ -61,11 +73,13 @@ const FAQ_Items = [
   function toggleAccordion(contentId) {
     const content = document.getElementById(contentId);
     const icon = document.getElementById('accordion-icon');
-    if (content.classList.contains('hidden')) {
-      content.classList.remove('hidden');
+    if (content.classList.contains('h-0')) {
+      content.classList.remove('h-0');
+      content.classList.add('h-[130px]');
       icon.classList.add('rotate-180');
     } else {
-      content.classList.add('hidden');
+      content.classList.add('h-0');
+      content.classList.remove('h-[130px]');
       icon.classList.remove('rotate-180');
     }
   }
