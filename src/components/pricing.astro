@@ -1,0 +1,89 @@
+---
+const star = './../../public/icons/star.png';
+---
+<div class="py-8 flex-col justify-center bg-[#F7F2FF] pb-10">
+  <div class="text-center py-2">
+    <h3 class="text-gray-800">Pricing Plans</h3>
+    <p class="font-light">Explore our package tiers</p>
+  </div>
+
+  <div class="pt-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 max-w-[920px] m-auto mx-4 lg:mx-auto">
+    <div class="border border-slate-300 rounded-xl pt-4 pb-2 px-6 hover:shadow-md bg-white">
+      <div class="">
+        <h4 class="font-bold">Hobby</h4>
+        <p class="font-light pb-2">For your scam hobbyist.</p>
+      </div>
+
+      <div class="pb-4 pt-6 border-y border-slate-300">
+        <p><span class="text-6xl pr-2 md:text-4xl">FREE</span><span class="text-xs font-light">/forever</span></p>
+      </div>
+
+      <div class="py-2">
+        <ul>
+          <li>Feature</li>
+          <li>Feature</li>
+          <li>Feature</li>
+          <li>Feature</li>
+        </ul>
+      </div>
+
+      <div class="flex py-2 w-full">
+        <button class="m-auto bg-black hover:bg-emerald-500 px-4 py-2 rounded-lg bg-red-400 text-white font-semibold w-full">Activate Plan</button>
+      </div>
+    </div>
+
+    <div class="border rounded-xl pt-4 pb-2 px-6 hover:shadow-md bg-gradient-to-br from-rose-500 to-purple-400 text-white">
+      <div class="text-center py-[8px] mb-2 rounded backdrop-blur-lg bg-white/20 flex">
+        <div class="m-auto flex">
+          <img src={star} class="w-[24px] h-[24px] mr-2"/>
+          <p class="font-semibold text-sm mt-[4px]">Recommended</p>
+        </div>
+      </div>
+      <div class="">
+        <h4 class="font-bold">Professional</h4>
+        <p class="font-light pb-2">Perfect for business owners.</p>
+      </div>
+
+      <div class="pb-4 pt-6 border-y border-white ">
+        <p><span class="text-6xl pr-2 md:text-4xl"><sup class="font-light">$</sup>645</span><span class="text-xs font-light">/month</span></p>
+      </div>
+
+      <div class="py-2">
+        <ul>
+          <li>Feature</li>
+          <li>Feature</li>
+          <li>Feature</li>
+          <li>Feature</li>
+        </ul>
+      </div>
+
+      <div class="flex py-2 w-full">
+        <button class="m-auto bg-white hover:bg-black hover:text-white px-4 py-2 rounded-lg text-black font-semibold w-full">Activate Plan</button>
+      </div>
+    </div>
+
+    <div class="border border-slate-300 rounded-xl pt-4 pb-2 px-6 hover:shadow-md bg-white">
+      <div class="">
+        <h4 class="font-bold">Enterprise</h4>
+        <p class="font-light pb-2">No Compromise.</p>
+      </div>
+
+      <div class="pb-4 pt-6 border-y border-slate-300">
+        <p><span class="text-6xl pr-2 md:text-4xl"><sup class="font-light">$</sup>11,999</span><span class="text-xs font-light">/month</span></p>
+      </div>
+
+      <div class="py-2">
+        <ul>
+          <li>Feature</li>
+          <li>Feature</li>
+          <li>Feature</li>
+          <li>Feature</li>
+        </ul>
+      </div>
+
+      <div class="flex py-2 w-full justify-end">
+        <button class="m-auto bg-black hover:bg-emerald-500 px-4 py-2 rounded-lg bg-red-400 text-white font-semibold w-full">Activate Plan</button>
+      </div>
+    </div>
+  </div>
+</div>
