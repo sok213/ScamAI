@@ -2,7 +2,21 @@
 const rocket = './../../public/icons/rocket.svg';
 const graph = './../../public/icons/graph.svg';
 const guy = './../../public/icons/guy.png';
+const guyAndGraph = './../../public/icons/graph-man.png';
 ---
+<style>
+
+  @media screen and (max-width: 1180px) {
+    #waitCard-top {
+      right: auto;
+    }
+
+    #waitCard-bottom {
+      left: auto;
+      text-align: left;
+    }
+  }
+</style>
 
 <div class="bg-[#F7F2FF] px-4 pt-6 pb-12 m-auto">
   <div class="text-center font-semobold text-gray-800 py-4">
@@ -10,7 +24,7 @@ const guy = './../../public/icons/guy.png';
   </div>
 
   <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 md:gap-2 gap-4 lg:gap-10 container m-auto pb-4">
-    <div class="bg-[#FFE7B3] p-4 rounded border border-white h-fit">
+    <div class="bg-[#FFE7B3] p-4 rounded border border-white h-full">
       <div class="text-center pb-2">
         <h3 class="text-[#FFB71D]">INITIATE</h3>
       </div>
@@ -20,7 +34,7 @@ const guy = './../../public/icons/guy.png';
         <button class="bg-[#5E51ED] rounded px-4 w-20"><img src={rocket} /></button>
       </div>
 
-      <div class="border border-[#CEC5C5] shadow-md bg-white h-full rounded my-2 max-w-[263px]">
+      <div class="border border-[#CEC5C5] shadow-md bg-white h-fit rounded my-2 max-w-full md:max-w-[263px]">
         <ul class="px-4 py-2 text-gray-800">
           <li class="pb-2 pt-2 mb-2 border-b border-gray-400"><p>1. Upload your processes.</p></li>
           <li class="pb-2 mb-2 border-b border-gray-400"><p>2. Explain your needs.</p></li>
@@ -37,36 +51,33 @@ const guy = './../../public/icons/guy.png';
       </div>
 
       <div class="flex flex-col h-full justify-between text-gray-800">
-        <div class="bg-white flex-grow mb-6 rounded-md px-4 pb-2 pt-4 shadow relative md:right-10">
+        <div class="bg-white flex-grow mb-6 rounded-md px-4 pb-2 pt-4 shadow relative md:right-10" id="waitCard-top">
           <h4 class="font-semibold ">Brainstorm, then build.</h4>
-          <p class="font-light text-base pt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus finibus dictum purus at laoreet. </p>
+          <p class="font-light text-base py-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus finibus dictum purus at laoreet. </p>
         </div>
   
-        <div class="text-right bg-white flex-grow rounded-md px-4 pb-2 pt-4 shadow relative md:left-10">
+        <div class="text-right bg-white flex-grow rounded-md px-4 pb-2 pt-4 shadow relative md:left-10" id="waitCard-bottom">
           <h4 class="font-semibold">Automate. Everything.</h4>
-          <p class="font-light text-base pt-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus finibus dictum purus at laoreet. </p>
+          <p class="font-light text-base py-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus finibus dictum purus at laoreet. </p>
         </div>
       </div>
 
     </div>
 
-    <div class="bg-[#F6B4CF] p-4 rounded border border-white h-full flex flex-col text-gray-800">
+    <div class="bg-[#F6B4CF] p-4 rounded border border-white h-full flex flex-col text-gray-800 max-h-fit">
       <div class="text-center pb-2">
         <h3 class="text-[#FF4C95]">PROFIT</h3>
       </div>
 
-      <div class="bg-white h-fit rounded justify-between flex flex-col max-h-[300px] shadow">
+      <div class="bg-white h-fit rounded justify-between flex flex-col h-full shadow">
         <div class="px-4">
-          <h4 class="text-left pt-4 pb-2 font-bold ">See the Results.</h4>
+          <h4 class="text-left pt-4 pb-2 font-bold">See the Results.</h4>
           <p class="font-light text-base">ScamAi curates a bespoke software based on your company structure and processes to fit your company needs to scam your clients faster!</p>
         </div>
 
-        <div class="p-4 flex flex-row">
-          <div class="bottom-[-110px] absolute">
-            <img src={graph} class="h-[124px]"/>
-          </div>
-          <div class="relative left-[190px] top-[-30px]">
-            <img src={guy} class="max-h-[240px]" />
+        <div class="p-4 flex flex-col mb-0 pb-0">
+          <div class="w-full m-auto relative">
+            <img src={graph} class="m-auto w-[200px] pb-4" />
           </div>
         </div>
         
