@@ -8,9 +8,14 @@ import MansoryGrid from '../components/mansoryGrid.astro';
 import FAQ from '../components/faq.astro';
 import Resources from '../components/resources.astro';
 import Pricing from '../components/pricing.astro';
+import Navigation from './../components/navigation.astro';
+import TopCallout from '../components/topCallout.astro';
+import Footer from '../components/footer.astro';
 ---
 
 <Layout pageTitle="Welcome to ScamAi">
+  <TopCallout />
+  <Navigation />
   <HeroBanner />
   <div class="container m-auto">
     <AffiliatedBrands />
@@ -25,4 +30,5 @@ import Pricing from '../components/pricing.astro';
     <FAQ />
   </div>
   <Resources />
+  <Footer />
 </Layout>

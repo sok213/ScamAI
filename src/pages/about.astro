@@ -1,26 +1,24 @@
 ---
 import Layout from './../layouts/layout.astro';
-const identity = {
-  firstName: "Sarah",
-  country: "Canada",
-  occupation: "Technical Writer",
-  hobbies: ["photography", "birdwatching", "baseball"],
-};
-
-const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
+const skills = ["HTML", "CSS", "CSS Grid", "FlexBox", "JavaScript", "Astro Framework", "TailwindCSS", "Designed in Figma", "Developed in Visual Studio Code", "Developed on a Windows 10 PC", "Developed in a very old apartment in L.A.", "Developer sat on an IKEA office chair.", "Developer powered by black coffee.", "Computer powered by the LADWP."];
 ---
 <Layout pageTitle="About">
-  <h1>About Me</h1>
-  <h2>... and my new Astro site!</h2>
+  <div class="container m-auto h-screen justify-center flex flex-col px-10 m-auto">
+    <h1 class="font-bold pb-2">SOME WORDS.</h1>
+  
+    <p class="font-light italic">"This website is a work of fiction and does not represent any real companies. I am glad you enjoyed interacting and viewing this webpage that I designed and made myself. This project is a passion project to showcase my skills and expertise in modern web development and design." <span class="not-italic">- The Developer</span></p> <br>
+  
+    <p class="pb-2">This project was built with:</p>
+    <ul>
+      {skills.map( hobby => 
+        <li>
+          <p>- {hobby}</p>
+        </li>
+      )}
+    </ul>
 
-  <p>I am working through Astro's introductory tutorial. This is the second page on my website, and it's the first one I built myself!</p>
-
-  <p>Below is a dynamic list.</p>
-  <ul>
-    {skills.map( hobby => 
-      <li>
-        <p>{hobby}</p>
-      </li>
-    )}
-  </ul>
+    <div class="py-4">
+      <button class="border border-2 border-black px-4 py-2 rounded font-bold hover:bg-black hover:text-white hover:border-white"><a href="/">Return Home</a></button>
+    </div>
+  </div>
 </Layout>

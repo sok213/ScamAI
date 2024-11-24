@@ -48,17 +48,17 @@ const footerContent = [
 const socialLinks = [
   {
     icon: aol,
-    link: '#',
+    link: 'https://en.wikipedia.org/wiki/AOL',
     alt: 'icon of AOL logo'
   },
   {
     icon: myspace,
-    link: '#',
+    link: 'https://myspace.com/signin',
     alt: 'icon of MySpace logo'
   },
   {
     icon: threads,
-    link: '#',
+    link: 'https://media.istockphoto.com/id/171584082/photo/old-trashcan-clipping-path.webp?s=2048x2048&w=is&k=20&c=gU7-9mjW0vg9ZDKhEn2cjX1wEFswilW070DT-2ibTKc=',
     alt: 'icon of Instagram Threads logo'
   },
 ]
@@ -79,7 +79,7 @@ const year = new Date().getFullYear();
               <ul class="pt-2">
                 {
                   item.links.map(link => {
-                    return <li class="py-1"><a href="#" class="text-neutral-400 hover:underline">{link}</a></li>
+                    return <li class="py-1"><a href="/about" class="text-neutral-400 hover:underline">{link}</a></li>
                   })
                 }
               </ul>
@@ -98,7 +98,7 @@ const year = new Date().getFullYear();
           {
             socialLinks.map(item => {
               return <div class="p-2 rounded-full bg-stone-800">
-                <a href={item.link}><img src={item.icon} class="w-8"/></a>
+                <a href={item.link} target="_blank"><img src={item.icon} class="w-8"/></a>
               </div>
             })
           }
