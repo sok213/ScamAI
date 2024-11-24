@@ -2,6 +2,7 @@
 const aol = "./../../public/icons/aol.svg";
 const myspace = "./../../public/icons/myspace.svg";
 const threads = "./../../public/icons/threads.svg";
+const footer = "./../../public/icons/footerlogo.png";
 
 const footerContent = [
   {
@@ -68,8 +69,8 @@ const year = new Date().getFullYear();
 <div class="bg-stone-950 text-slate-100 px-8 md:px-4 pt-12 pb-8">
   <div class="container m-auto">
     <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-0 sm:gap-8 pb-8">
-      <div>
-        Logo here
+      <div class="pb-8 md:pb-0">
+        <img class="max-h-[240px]" src={footer} />
       </div>
       {
         footerContent.map(item => {
