@@ -30,7 +30,8 @@
     }
 
     if(navMenu) {
-      navMenu.classList.toggle('text-black', scrollY > 690);
+      navMenu.classList.toggle('text-white', scrollY > 8311);
+      navMenu.classList.toggle('text-black', scrollY > 690 && scrollY < 8311);
       navMenu.classList.toggle('text-white', scrollY < 690);
     }
   });

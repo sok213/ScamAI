@@ -50,6 +50,33 @@ const { pageTitle } = Astro.props;
     }
   }
 
+  .magic {
+    background: linear-gradient(
+      135deg,
+      #fdfcfb,  /* Soft white */
+      #e3f2fd,  /* Light sky blue */
+      #d7e8f7,  /* Cool pastel blue */
+      #f5e6fa,  /* Gentle lavender */
+      #ffe5d9,  /* Light peach */
+      #ffffd4   /* Soft cream */
+    );
+    
+    background-size: 400% 400%; /* Enlarges the gradient for smooth transitions */
+    animation: gradientAura 20s ease infinite; /* Slower, smoother transitions */
+  }
+
+  @keyframes gradientAura {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
   .container {
     max-width: 1200px;
   }
