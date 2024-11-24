@@ -1,6 +1,6 @@
 ---
 ---
-<div class="text-slate-100 z-10 relative m-auto top-6 w-full px-4 justify-center z-50" id="navigation">
+<div class="text-slate-100 z-50 relative m-auto top-6 w-full px-4 justify-center" id="navigation">
 
   <div class="m-auto flex justify-center font-bold max-w-[400px] md:max-w-[490px] backdrop-blur-lg bg-white/0 rounded-full px-4 py-4 shadow-xl" id="navMenu">
     <a href="/" class="p-2 hover:underline underline-offset-2">PORTAL</a>
@@ -14,6 +14,14 @@
 <script>
   const navigation = document.getElementById('navigation');
   const navMenu = document.getElementById('navMenu');
+
+  let width = 0;
+  function checkBrowserWidth() {
+    width = window.innerWidth;
+  }
+
+  window.addEventListener('resize', checkBrowserWidth);
+  checkBrowserWidth();
 
   // Add scroll event listener to the window
   window.addEventListener('scroll', () => {
@@ -30,9 +38,13 @@
     }
 
     if(navMenu) {
-      navMenu.classList.toggle('text-white', scrollY > 8311);
-      navMenu.classList.toggle('text-black', scrollY > 690 && scrollY < 8311);
-      navMenu.classList.toggle('text-white', scrollY < 690);
+      if(width > 767) {
+        navMenu.classList.toggle('text-white', scrollY > 8311);
+        navMenu.classList.toggle('text-black', scrollY > 660 && scrollY < 8311);
+      } else {
+        navMenu.classList.toggle('text-black', scrollY > 580);
+        navMenu.classList.toggle('text-white', scrollY > 8305);
+      }
     }
   });
 </script>
