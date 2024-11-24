@@ -1,5 +1,24 @@
 ---
 ---
+<style>
+  .slide_left {
+    box-shadow: inset 0 0 0 0 #333333;
+    transition: ease-out 0.4s;
+  }
+
+  .slide_left:hover {
+    box-shadow: inset 400px 0 0 0 #333333;
+    color: white !important;
+  }
+
+  .slide_left img {
+    transition: ease-out 0.4s;
+  }
+
+  .slide_left:hover img {
+    filter: invert(1);
+  }
+</style>
 <div class="container-fluid bg-gradient-to-r from-[#F4D7FF] to-[#D4E8FF] min-h-[240px] flex justify-center relative z-50 mt-[-80px]">
   <div class="container m-auto">
 
@@ -9,17 +28,17 @@
       </div>
     
       <div class="grid grid-cols-1 md:grid-cols-3 py-4 gap-6 md:gap-2">
-        <div class="border border-2 border-[#333333] py-4 px-4 mr-4 flex flex-row md:flex-col lg:flex-row justify-between">
+        <div class="border border-2 border-[#333333] py-4 px-4 mr-4 flex flex-row md:flex-col lg:flex-row justify-between hover:cursor-pointer slide_left">
           <h4>Book a Demo</h4>
           <img class="pt-3 lg:pt-0" src="./../../public/icons/arrowRight.svg" style="width:50px" />
         </div>
     
-        <div class="border border-2 border-[#333333] py-4 px-4 mr-4 flex flex-row md:flex-col lg:flex-row justify-between">
+        <div class="border border-2 border-[#333333] py-4 px-4 mr-4 flex flex-row md:flex-col lg:flex-row justify-between hover:cursor-pointer slide_left">
           <h4>Investor Relations</h4>
           <img class="pt-3 lg:pt-0" src="./../../public/icons/arrowRight.svg" style="width:50px" />
         </div>
     
-        <div class="border border-2 border-[#333333] py-4 px-4 mr-4 flex flex-row md:flex-col lg:flex-row justify-between">
+        <div class="border border-2 border-[#333333] py-4 px-4 mr-4 flex flex-row md:flex-col lg:flex-row justify-between hover:cursor-pointer slide_left">
           <h4>Documentation</h4>
           <img class="pt-3 lg:pt-0" src="./../../public/icons/arrowRight.svg" style="width:50px" />
         </div>
